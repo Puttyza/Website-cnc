@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>หน้าชำระเงิน</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Roboto", sans-serif;
+        background-color: #f0f2f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        width: 450px;
+        animation: fadeIn 1s ease-in-out;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #333;
+        font-size: 26px;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+        color: #555;
+      }
+
+      input[type="text"],
+      input[type="number"] {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 16px;
+        transition: border-color 0.3s ease;
+      }
+
+      input[type="text"]:focus,
+      input[type="number"]:focus {
+        border-color: #007bff;
+        outline: none;
+        box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+      }
+
+      .btn {
+        display: block;
+        width: 100%;
+        padding: 14px;
+        background-color: #007bff;
+        border: none;
+        border-radius: 6px;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .btn:hover {
+        background-color: #0056b3;
+      }
+
+      .btn:active {
+        background-color: #004494;
+      }
+
+      /* เพิ่มการจัดเรียงแบบ 2 คอลัมน์สำหรับฟิลด์บัตรเครดิต */
+      .card-details {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .card-details .form-group {
+        flex: 1;
+      }
+
+      .card-details .form-group:first-child {
+        margin-right: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>ชำระเงิน</h2>
+      <form action="/submit-payment" method="POST">
+        <div class="form-group">
+          <label for="name">ชื่อ:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="ชื่อเต็ม"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="address">ที่อยู่:</label>
+          <input
+            type="text"
+            id="address"
+            name="address"
+            placeholder="ที่อยู่"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="card">หมายเลขบัตรเครดิต:</label>
+          <input
+            type="number"
+            id="card"
+            name="card"
+            placeholder="หมายเลขบัตร"
+            required
+          />
+        </div>
+
+        <div class="card-details">
+          <div class="form-group">
+            <label for="expiry">วันหมดอายุ:</label>
+            <input
+              type="text"
+              id="expiry"
+              name="expiry"
+              placeholder="MM/YY"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="cvv">CVV:</label>
+            <input
+              type="number"
+              id="cvv"
+              name="cvv"
+              placeholder="123"
+              required
+            />
+          </div>
+        </div>
+
+        <button type="submit" class="btn">ชำระเงิน</button>
+      </form>
+    </div>
+  </body>
+</html>

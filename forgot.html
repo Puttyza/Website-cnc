@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ลืมรหัสผ่าน</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <!-- Google Fonts: Prompt -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <style>
+      .blog {
+        margin: 30px auto;
+        padding: 20px;
+        width: 82%;
+        border-radius: 7px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        background-color: #ffffff;
+      }
+      .card-title {
+        font-weight: 600;
+        color: #333;
+      }
+      .btn-primary {
+        background-color: #0d6efd;
+        border-color: #0d6efd;
+      }
+      .btn-primary:hover {
+        background-color: #0b5ed7;
+        border-color: #0a58ca;
+      }
+      .form-label {
+        font-weight: 500;
+      }
+      .text-muted {
+        color: #6c757d !important;
+      }
+      .text-center a {
+        color: #0d6efd;
+        text-decoration: none;
+      }
+      .text-center a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container px-5">
+        <a class="navbar-brand" href="#"
+          ><img
+            src="https://media.discordapp.net/attachments/1097073166146343002/1293575092126617722/logo.png?ex=6707df2f&is=67068daf&hm=126a238160641aa7d38ca3d253ac595dbec2ec004ca6e9766bc50c5d26d2b555&=&format=webp&quality=lossless"
+            alt="Logo"
+            style="height: 40px"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="promotion.html">โปรโมชั่น</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="materials.html">วัสดุ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">ผลงานของเรา</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="preorder.html">สั่งทำสินค้า</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                เข้าสู่ระบบ
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="login.html">เข้าสู่ระบบ</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="register.html">สมัครสมาชิก</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Forgot Password Form -->
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="blog shadow-sm">
+            <div class="card-body">
+              <div class="text-center mb-2">
+                <img
+                  src="https://media.discordapp.net/attachments/1097073166146343002/1293571065649430545/Black_Violet_Sleek_and_Professional_Basic_Simple_Presentation_940_x_940_px.png?ex=6708842f&is=670732af&hm=5308e7db0a14617eb495d6f5316648c8e0a70a0064ff6871366d88ee63f0b40b&=&format=webp&quality=lossless&width=671&height=671"
+                  alt="Logo"
+                  style="height: 90px"
+                />
+              </div>
+              <h2 class="card-title text-center mb-4">ลืมรหัสผ่าน</h2>
+              <form id="forgotPasswordForm">
+                <div class="mb-3">
+                  <label for="email" class="form-label"
+                    >อีเมล <span class="text-danger">*</span></label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="กรุณากรอกอีเมล"
+                    required
+                  />
+                </div>
+                <button type="submit" class="btn btn-primary w-100">
+                  รีเซ็ตรหัสผ่าน
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center py-4">
+      <p></p>
+    </div>
+    <div class="text-center py-4">
+      <p></p>
+    </div>
+    <div class="text-center py-4">
+      <p></p>
+    </div>
+    <div class="text-center py-4">
+      <p></p>
+    </div>
+    <div class="text-center py-3">
+      <p></p>
+    </div>
+    <div class="text-center py-3">
+      <p></p>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center py-3 mt-5">
+      <p>&copy; ติดต่อเราได้ที่ 02-811-1720</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document
+        .getElementById("forgotPasswordForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          alert(
+            "หากอีเมลที่กรอกมีอยู่ในระบบ เราจะส่งลิงก์สำหรับรีเซ็ตรหัสผ่านไปยังอีเมลของคุณ"
+          );
+          window.location.href = "login.html";
+        });
+    </script>
+  </body>
+</html>
